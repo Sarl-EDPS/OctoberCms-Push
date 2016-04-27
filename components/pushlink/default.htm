@@ -1,0 +1,88 @@
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+
+<script>
+    var OneSignal = OneSignal || [],
+        elementUSL= document.getElementById('unsubscribe-link'),
+        elementSL = document.getElementById('subscribe-link');
+
+    function subscribe() {
+        OneSignal.push(function() {
+            //elementSL.style.display= "none";
+            OneSignal.registerForPushNotifications(function () {modalPrompt: true});
+        });
+        event.preventDefault();
+    };
+    function unsubscribe() {
+        OneSignal.push(["setSubscription", false]);
+        elementUSL.style.display= "none";
+        elementSL.style.display= "block";
+        event.preventDefault();
+    };
+    
+    OneSignal.push(["init", {
+        appId: '{{ oneSignal.id }}',
+        subdomainName: '{{ oneSignal.subdomain }}',
+        autoRegister: false,
+        notifyButton: {
+            enable: false, //{{ oneSignal.enable }},
+            prenotify: {{ oneSignal.prenotify }},
+            showCredit: {{ oneSignal.credit }},
+            persistNotification: {{ oneSignal.persist }},
+            welcomeNotification : '{{ oneSignal.welcome }}',
+            text: {
+                'tip.state.unsubscribed':         '{{ oneSignalText.tipUnsubscribed }}',
+                'tip.state.subscribed':           '{{ oneSignalText.tipSubscribed }}',
+                'tip.state.blocked':              '{{ oneSignalText.tipBlocked }}',
+                'message.prenotify':              '{{ oneSignalText.messagePrenotify }}',
+                'message.action.subscribed':      '{{ oneSignalText.messageSubscribed }}',
+                'message.action.resubscribed':    '{{ oneSignalText.messageResubscribed }}',
+                'message.action.unsubscribed':    '{{ oneSignalText.messageUnsubscribed }}',
+                'dialog.main.title':              '{{ oneSignalText.dialogTitle }}',
+                'dialog.main.button.subscribe':   '{{ oneSignalText.dialogSubscribe }}',
+                'dialog.main.button.unsubscribe': '{{ oneSignalText.dialogUnsubscribe }}',
+                'dialog.blocked.title':           '{{ oneSignalText.bDialogTitle }}',
+                'dialog.blocked.message':         '{{ oneSignalText.bDialogMessage }}'
+            }
+        },
+        promptOptions: {
+            actionMessage :                    '{{ oneSignalText.prompt_action }}',
+            exampleNotificationTitleDesktop:   '{{ oneSignalText.prompt_exNTD }}',
+            exampleNotificationMessageDesktop: '{{ oneSignalText.prompt_exNMD }}',
+            exampleNotificationTitleMobile:    '{{ oneSignalText.prompt_exNTM }}',
+            exampleNotificationMessageMobile:  '{{ oneSignalText.prompt_exNMM }}',
+            exampleNotificationCaption:        '{{ oneSignalText.prompt_exNCaption }}',
+            acceptButtonText:                  '{{ oneSignalText.prompt_accept }}',
+            cancelButtonText:                  '{{ oneSignalText.prompt_cancel }}',
+            showCredit:                        '{{ oneSignal.credit }}'
+        },
+        welcomeNotification: {
+            disable:                false,
+            title:                  '{{ oneSignalText.welcome_title }}',
+            message:                '{{ oneSignalText.welcome_message }}'
+        }
+    }]);
+
+    OneSignal.push(function() {
+        // If we're on an unsupported browser, do nothing
+        if (!OneSignal.isPushNotificationsSupported()) {
+            return;
+        }
+        elementSL.addEventListener('click', subscribe);
+        elementUSL.addEventListener('click', unsubscribe);
+        elementSL.style.display="none";
+        elementUSL.style.display="none";
+        if (OneSignal.isPushNotificationsEnabled()) elementUSL.style.display="block";
+        else elementSL.style.display="block";
+        // Occurs when the user's subscription changes to a new value.
+        OneSignal.on('subscriptionChange', function (isSubscribed) {
+            if (isSubscribed) {
+                elementUSL.style.display= "block";
+                elementSL.style.display= "none";
+            }
+            else {
+                elementSL.style.display= "block";
+                elementUSL.style.display= "none";
+            }
+        });
+    });
+</script>

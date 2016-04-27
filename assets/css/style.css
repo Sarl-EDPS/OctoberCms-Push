@@ -1,0 +1,20 @@
+/* required styles */
+#onesignal-link {
+  	background-image: url(../img/OneSignal_icon.png);
+  	background-size: 32px 32px;
+  	background-repeat: no-repeat;
+	max-width: 130px;
+	margin-left: 10px;
+	min-height: 34px;
+	display: block;
+    text-decoration: underline;
+    padding: 5px;
+}
+#onesignal-link:hover {
+    border: 1px solid black;
+    color: black;
+}
+#subscribe-link, #unsubscribe-link {
+	padding-left: 32px;
+	text-decoration: none;
+}
