@@ -3,7 +3,7 @@
     return [
         'plugin' => [
             'name'                  => 'OneSignal Push',
-            'description'           => 'Push notifications with OneSignal SDK',
+            'description'           => 'Push notifications avec OneSignal',
         ],
 
         'onesignal' => [
@@ -20,7 +20,6 @@
             'bDialogTitle'          => "Débloquer les Notifications",
             'bDialogMessage'        => "Suivez ces instructions pour autoriser les notifications:",
             'prompt'            => [
-
                 'action'            => "veut afficher des notifications: ",
                 'exNTD'             => "Voici un exemple de notification",
                 'exNMD'             => "Les notifications s'afficheront sur votre bureau",
@@ -47,12 +46,16 @@
                     'description'       => 'Si votre site ne supporte pas HTTPS, ou Sert quelques pages à travers HTTP et d\'autres pages à travers HTTPS alors validé cette option de repli pour HTTP. Autrement laissé cette option non décochée!',
                 ],
                 'subdomain' => [
-                    'title'             =>  'Choisisser votre Subdomaine',
-                    'description'       =>  'Parce que les notifications Push de Chrome nécessitent un site HTTPS, les sites non-HTTPS peuvent utiliser un subdomaine de onesignal.com, choisissez un subdomaine unique.',
+                    'title'             =>  'Choisisser votre Domaine ou Subdomaine',
+                    'description'       =>  'Les notifications Push nécessitent un site HTTPS, les sites non-HTTPS peuvent utiliser un subdomaine de onesignal.com, choisissez un subdomaine unique.',
                 ],
                 'id'        => [
                     'title'             => 'Id projet OneSignal',
                     'description'       => 'Vous pouvez obtenir votre ID projet OneSignal de "onesignal.com"',
+                ],
+                'idSafari'        => [
+                    'title'             => 'Id Safari pour OneSignal',
+                    'description'       => 'Vous pouvez obtenir votre ID Safari OneSignal de "onesignal.com"',
                 ],
                 'enable'    => [
                     'title'             => 'Autoriser les Notification',

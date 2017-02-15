@@ -21,14 +21,12 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 ### Not implemented yet in this plugin
 ```
-- 'Notification https website'
-- 'Safari and Opera support'
+- 'Opera support'
 ```
 
 ### ToDo
 ```
-- 'Notification for fully https website'
-- 'Safari and Opera Support'
+- 'Opera, Vivaldi Support'
 - 'More parameters for button theme personnalisation'
 - 'Send Notifications from Backend'
 ```

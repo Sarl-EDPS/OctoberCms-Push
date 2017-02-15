@@ -18,23 +18,23 @@ class PushButton extends ComponentBase
   	public function defineProperties()
     {
         return [
-            'nohttps'     => [
-                'title'       => 'edps.push::lang.components.push.nohttps.title',
-                'description' => 'edps.push::lang.components.push.nohttps.description',
-                'type'        => 'checkbox',
-                'default'     => 'true',
-            ],
             'subdomain' => [
                 'title'       =>  'edps.push::lang.components.push.subdomain.title',
                 'description' =>  'edps.push::lang.components.push.subdomain.description',
                 'type'        =>  'string',
-                'default'     =>  'yourSubdomain',
+                'default'     =>  'YOUR_DOMAIN',
             ],
             'id' => [
                 'title'       => 'edps.push::lang.components.push.id.title',
                 'description' => 'edps.push::lang.components.push.id.description"',
                 'type'        => 'string',
                 'default'     => 'YOUR_ONESIGNAL_APP_ID',
+            ],
+            'idSafari' => [
+                'title'       => 'edps.push::lang.components.push.idSafari.title',
+                'description' => 'edps.push::lang.components.push.idSafari.description"',
+                'type'        => 'string',
+                'default'     => 'YOUR_ONESIGNAL_SAFARI_ID',
             ],
             'enable' => [
                 'title'             => 'edps.push::lang.components.push.enable.title',
@@ -109,7 +109,7 @@ class PushButton extends ComponentBase
                 'type'          => 'checkbox',
                 'default'       => 'true',
             ]
-        ];  
+        ];
     }
 
     public function onRun()

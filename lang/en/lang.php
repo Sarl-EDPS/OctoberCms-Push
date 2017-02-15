@@ -45,12 +45,16 @@
                     'description'       => 'If your site: Does not support HTTPS, or Serves some pages over HTTP and other pages over HTTPS then enable this HTTP Fallback option. Otherwise leave this option unchecked!',
                 ],
                 'subdomain' => [
-                    'title'             =>  'Choose your Subdomain',
-                    'description'       =>  'Because Chrome push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain.',
+                    'title'             =>  'Choose your Domain or Subdomain',
+                    'description'       =>  'Push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain.',
                 ],
                 'id' => [
                     'title'             => 'OneSignal App Id',
                     'description'       => 'Your can get your OneSignal Project Id from "onesignal.com"',
+                ],
+                'idSafari'        => [
+                    'title'             => 'OneSignal Id for Safari',
+                    'description'       => 'Your can get your OneSignal Safari Id from "onesignal.com"',
                 ],
                 'enable' => [
                     'title'             => 'Enable Notification',

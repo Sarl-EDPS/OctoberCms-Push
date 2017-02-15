@@ -1,8 +1,0 @@
-{
-  "name": "YOUR_SITE_NAME",
-  "short_name": "YOUR_SITE_NAME",
-  "start_url": "/",
-  "display": "standalone",
-  "gcm_sender_id": "YOUR_GOOGLE_PROJECT_NUMBER",
-  "gcm_user_visible_only": true
-}

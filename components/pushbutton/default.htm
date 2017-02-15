@@ -1,66 +1,69 @@
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+<link rel="manifest" href="../manifest.json">
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
 
 <script>
-    var OneSignal = OneSignal || [];
-    OneSignal.push(["init", {
-      	appId: '{{ oneSignal.id }}',
-      	subdomainName: '{{ oneSignal.subdomain }}',
-		notifyButton: {
-		    enable: {{ oneSignal.enable }},
-		    size: '{{ oneSignal.size }}',
-		    theme: '{{ oneSignal.theme }}',
-		    position: '{{ oneSignal.position }}',
-		    offset: {
-		      bottom: '{{ oneSignal.bottom }}',
-		      left: '{{ oneSignal.left }}',
-		      right: '{{ oneSignal.right }}'
-		    },
-		    prenotify: {{ oneSignal.prenotify }},
-		    showCredit: {{ oneSignal.credit }},
-		    persistNotification: {{ oneSignal.persist }},
-		    welcomeNotification : '{{ oneSignal.welcome }}',
-		    text: {
-		      'tip.state.unsubscribed': 		'{{ oneSignalText.tipUnsubscribed }}',
-		      'tip.state.subscribed': 			'{{ oneSignalText.tipSubscribed }}',
-		      'tip.state.blocked': 				'{{ oneSignalText.tipBlocked }}',
-		      'message.prenotify': 				'{{ oneSignalText.MessagePrenotify }}',
-		      'message.action.subscribed': 		'{{ oneSignalText.MessageSubscribed }}',
-		      'message.action.resubscribed': 	'{{ oneSignalText.MessageResubscribed }}',
-		      'message.action.unsubscribed': 	'{{ oneSignalText.MessageUnsubscribed }}',
-		      'dialog.main.title': 				'{{ oneSignalText.dialogTitle }}',
-		      'dialog.main.button.subscribe': 	'{{ oneSignalText.dialogSubscribe }}',
-		      'dialog.main.button.unsubscribe': '{{ oneSignalText.dialogUnsubscribe }}',
-		      'dialog.blocked.title': 			'{{ oneSignalText.bDialogTitle }}',
-		      'dialog.blocked.message': 		'{{ oneSignalText.bDialogMessage }}'
-		},
-		promptOptions: {
-			actionMessage : '{{ oneSignalText.prompt.action }}',
-			exampleNotificationTitleDesktop: '{{ oneSignalText.prompt.exNTD }}',
-			exampleNotificationMessageDesktop: '{{ oneSignalText.prompt.exNMD }}',
-			exampleNotificationTitleMobile: '{{ oneSignalText.prompt.exNTM }}',
-			exampleNotificationMessageMobile: '{{ oneSignalText.prompt.exNMM }}',
-			exampleNotificationCaption: '{{ oneSignalText.prompt.exNCaption }}',
-			acceptButtonText: '{{ oneSignalText.prompt.accept }}',
-			cancelButtonText: '{{ oneSignalText.prompt.cancel }}',
-			showCredit: '{{ oneSignal.credit }}'
-		},
-		welcomeNotification: {
-			disable: false,
-			title: '{{ oneSignalText.welcome.title }}'.toUpperCase(),
-			message: '{{ oneSignalText.welcome.message }}'.toUpperCase()
-		}
-	/*	    colors: { // Customize the colors of the main button and dialog popup button
-      'circle.background': 'rgb(84,110,123)',
-      'circle.foreground': 'white',
-      'badge.background': 'rgb(84,110,123)',
-      'badge.foreground': 'white',
-      'badge.bordercolor': 'white',
-      'pulse.color': 'white',
-      'dialog.button.background.hovering': 'rgb(77, 101, 113)',
-      'dialog.button.background.active': 'rgb(70, 92, 103)',
-      'dialog.button.background': 'rgb(84,110,123)',
-      'dialog.button.foreground': 'white'
-    */
-      }
+    var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+          appId: '{{ oneSignal.id }}',
+          autoRegister: false,
+          persistNotification: false, // Automatically dismiss the notification after ~20 seconds
+          notifyButton: {
+      		    enable: {{ oneSignal.enable }},
+      		    size:     '{{ oneSignal.size }}',
+      		    theme:    '{{ oneSignal.theme }}',
+      		    position: '{{ oneSignal.position }}',
+      		    offset: {
+      		      bottom: '{{ oneSignal.bottom }}',
+      		      left:   '{{ oneSignal.left }}',
+      		      right:  '{{ oneSignal.right }}'
+      		    },
+      		    prenotify:           {{ oneSignal.prenotify }},
+        		  showCredit:          {{ oneSignal.credit }},
+        		  persistNotification: {{ oneSignal.persist }},
+        		  welcomeNotification:'{{ oneSignal.welcome }}',
+        		  text: {
+        		      'tip.state.unsubscribed': 		   '{{ oneSignalText.tipUnsubscribed }}',
+        		      'tip.state.subscribed': 			   '{{ oneSignalText.tipSubscribed }}',
+        		      'tip.state.blocked': 				     '{{ oneSignalText.tipBlocked }}',
+        		      'message.prenotify': 				     '{{ oneSignalText.MessagePrenotify }}',
+        		      'message.action.subscribed': 		 '{{ oneSignalText.MessageSubscribed }}',
+        		      'message.action.resubscribed': 	 '{{ oneSignalText.MessageResubscribed }}',
+        		      'message.action.unsubscribed': 	 '{{ oneSignalText.MessageUnsubscribed }}',
+        		      'dialog.main.title': 				     '{{ oneSignalText.dialogTitle }}',
+        		      'dialog.main.button.subscribe':  '{{ oneSignalText.dialogSubscribe }}',
+        		      'dialog.main.button.unsubscribe':'{{ oneSignalText.dialogUnsubscribe }}',
+        		      'dialog.blocked.title': 			   '{{ oneSignalText.bDialogTitle }}',
+        		      'dialog.blocked.message': 		   '{{ oneSignalText.bDialogMessage }}'
+        		  },
+            	promptOptions: {
+            			actionMessage :                    '{{ oneSignalText.prompt.action }}',
+            			exampleNotificationTitleDesktop:   '{{ oneSignalText.prompt.exNTD }}',
+            			exampleNotificationMessageDesktop: '{{ oneSignalText.prompt.exNMD }}',
+            			exampleNotificationTitleMobile:    '{{ oneSignalText.prompt.exNTM }}',
+            			exampleNotificationMessageMobile:  '{{ oneSignalText.prompt.exNMM }}',
+            			exampleNotificationCaption:        '{{ oneSignalText.prompt.exNCaption }}',
+            			acceptButtonText:                  '{{ oneSignalText.prompt.accept }}',
+            			cancelButtonText:                  '{{ oneSignalText.prompt.cancel }}',
+            			showCredit:                        '{{ oneSignal.credit }}'
+            	},
+            	welcomeNotification: {
+            			disable: false,
+            			title:   '{{ oneSignalText.welcome.title }}'.toUpperCase(),
+            			message: '{{ oneSignalText.welcome.message }}'.toUpperCase()
+            	}
+        	/*	colors: { // Customize the colors of the main button and dialog popup button
+              'circle.background': 'rgb(84,110,123)',
+              'circle.foreground': 'white',
+              'badge.background': 'rgb(84,110,123)',
+              'badge.foreground': 'white',
+              'badge.bordercolor': 'white',
+              'pulse.color': 'white',
+              'dialog.button.background.hovering': 'rgb(77, 101, 113)',
+              'dialog.button.background.active': 'rgb(70, 92, 103)',
+              'dialog.button.background': 'rgb(84,110,123)',
+              'dialog.button.foreground': 'white'
+            */
+        },
+        safari_web_id: '{{ oneSignal.idSafari }}'//'web.onesignal.auto.58b504fd-a471-4836-bd65-020899577e4e'
     }]);
 </script>
