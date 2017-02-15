@@ -47,12 +47,11 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 ### Adapt properties
 
-[![push link](http://img.ctrlv.in/img/16/04/27/5720ab0807152.png)](http://ctrlv.in/744666)
+[![push link](http://img.ctrlv.in/img/17/02/15/58a4bc7a04c17.png)](http://ctrlv.in/925735)
 
 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
-
 | **Choose your domain or subdomain** | Push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
 | **OneSignal App Id** | Your can get your OneSignal Project Id from "onesignal.com" |
 | **OneSignal Safari Id** | Your can get your OneSignal Project Id from "onesignal.com" |
@@ -63,7 +62,7 @@ If you have any questions, or you can't find what you're looking for, check out 
 | **Show Credit** | Hide OneSignal credit if false |
 
 
-[![push button](http://img.ctrlv.in/img/16/04/27/5720ab8a94120.png)](http://ctrlv.in/744668)
+[![push button](http://img.ctrlv.in/img/17/02/15/58a4baa3ab223.png)](http://ctrlv.in/925730)
 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
