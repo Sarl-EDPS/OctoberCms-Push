@@ -21,12 +21,13 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 ### Not implemented yet in this plugin
 ```
-- 'Opera support'
+- 'Vivaldi support'
 ```
 
 ### ToDo
 ```
-- 'Opera, Vivaldi Support'
+- 'Vivaldi Support'
+- 'Both Button and link in the same website'
 - 'More parameters for button theme personnalisation'
 - 'Send Notifications from Backend'
 ```
@@ -35,7 +36,10 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 
 
-### Add the plugin in your page.
+### Add the plugin in your page at the top of the head section.
+### Copy https://yoursite.com/manifest.json, https://yoursite.com/OneSignalSDKWorker.js, 
+         https://yoursite.com/OneSignalSDKUpdaterWorker.js in the top level root of your website 
+         (only for Https website).
 ### Choose Link or Button (not both at the same time for a website)
 ### Goto [OneSignal.com](http://onesignal.com) for sign in and Add a new App.
 ### Goto [Web Push Introduction](https://https://documentation.onesignal.com/docs/what-is-website-push) for set onesignal app parameters.
@@ -48,9 +52,10 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
-| **Not Fully HTTPS** | If your site, does not support HTTPS, or Serves some pages over HTTP and other pages over HTTPS then enable this HTTP Fallback option. Otherwise leave this option unchecked! **Not actif yet** |
-| **Choose your subdomain** | Because Chrome push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
+
+| **Choose your domain or subdomain** | Push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
 | **OneSignal App Id** | Your can get your OneSignal Project Id from "onesignal.com" |
+| **OneSignal Safari Id** | Your can get your OneSignal Project Id from "onesignal.com" |
 | **Enable notification** | Required to use the notify button. If false, no notification displaying |
 | **Prenotify Notification** | Show an icon with 1 unread message for first-time site visitors |
 | **Persist Notification** | If false, the notification will disappear roughly after 20 seconds. If true, the notification will be displayed indefinitely until the user interacts with notification (dismisses it or clicks it) |
@@ -63,8 +68,9 @@ If you have any questions, or you can't find what you're looking for, check out 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
 | **Not Fully HTTPS** | If your site, does not support HTTPS, or Serves some pages over HTTP and other pages over HTTPS then enable this HTTP Fallback option. Otherwise leave this option unchecked! **Not actif yet**. |
-| **Choose your subdomain** | Because Chrome push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
+| **Choose your domain or subdomain** | Push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
 | **OneSignal App Id** | Your can get your OneSignal Project Id from "onesignal.com" |
+| **OneSignal Safari Id** | Your can get your OneSignal Project Id from "onesignal.com" |
 | **Enable notification** | Required to use the notify button. If false, no notification displaying |
 | **Icon size** | Size of the subscribe button ("Small", "Medium", or "Large") |
 | **Theme** | Choos the theme of your button ("red-white" or "white-red") |
