@@ -14,7 +14,7 @@ OneSignal is a high volume and reliable push notification system for mobile and 
 - OneSignal provides a single UI and API to deliver messages across iOS, Android, Amazon Fire, Windows Phone, Chrome Apps, Safari, Chrome Web, Vivaldi, Opera, and Firefox.
 
 ### How do I get started? 
-Goto [OneSignal](https://onsignal.com) create an account and add a new app.
+Goto [OneSignal](https://onesignal.com) create an account and add a new app.
 OneSignal privide a fully-featured online dashboard
 
 If you have any questions, or you can't find what you're looking for, check out OneSinal [Frequently Asked Questions (FAQ)](http://documentation.onesignal.com/docs/frequently-asked-questions)!
