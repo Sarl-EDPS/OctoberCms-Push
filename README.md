@@ -47,7 +47,7 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 ### Adapt properties
 
-[![push link](http://img.ctrlv.in/img/17/02/15/58a4bc7a04c17.png)](http://ctrlv.in/925735)
+[![push link](http://img.ctrlv.in/img/17/02/15/58a4bc7a04c17.png)](https://octobercms.com/storage/app/uploads/public/572/29d/d6c/thumb_4550_64_64_0_0_auto.png)
 
 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
