@@ -19,27 +19,15 @@ OneSignal privide a fully-featured online dashboard
 
 If you have any questions, or you can't find what you're looking for, check out OneSinal [Frequently Asked Questions (FAQ)](http://documentation.onesignal.com/docs/frequently-asked-questions)!
 
-### Not implemented yet in this plugin
-```
-- 'Vivaldi support'
-```
-
 ### ToDo
 ```
-- 'Vivaldi Support'
 - 'Both Button and link in the same website'
 - 'More parameters for button theme personnalisation'
 - 'Send Notifications from Backend'
 ```
 
 
-
-
-
 ### Add the plugin in your page at the top of the head section.
-### Copy https://yoursite.com/manifest.json, https://yoursite.com/OneSignalSDKWorker.js, 
-         https://yoursite.com/OneSignalSDKUpdaterWorker.js in the top level root of your website 
-         (only for Https website).
 ### Choose Link or Button (not both at the same time for a website)
 ### Goto [OneSignal.com](http://onesignal.com) for sign in and Add a new App.
 ### Goto [Web Push Introduction](https://https://documentation.onesignal.com/docs/what-is-website-push) for set onesignal app parameters.
