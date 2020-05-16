@@ -34,6 +34,7 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 
 ### Adapt properties
+[![push link](https://octobercms.com/storage/app/uploads/public/572/29d/d6c/thumb_4550_64_64_0_0_auto.png)]
 
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
@@ -65,11 +66,6 @@ If you have any questions, or you can't find what you're looking for, check out 
 | **Welcome Message** | Customise or Disable the automatic welcome notification |
 | **Persist Notification** | If false, the notification will disappear roughly after 20 seconds. If true, the notification will be displayed indefinitely until the user interacts with notification (dismisses it or clicks it) |
 
-
-
-### The plugin Push Link or Button on your page
-
-[![push page](http://img.ctrlv.in/img/16/04/27/5720abb7dd59e.png)](http://ctrlv.in/744669)
 
 ### For Link Notification Add this in your page
 
