@@ -50,8 +50,6 @@ If you have any questions, or you can't find what you're looking for, check out 
 | **Show Credit** | Hide OneSignal credit if false |
 
 
-[![push button](http://img.ctrlv.in/img/17/02/15/58a4baa3ab223.png)](http://ctrlv.in/925730)
-
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
 | **Not Fully HTTPS** | If your site, does not support HTTPS, or Serves some pages over HTTP and other pages over HTTPS then enable this HTTP Fallback option. Otherwise leave this option unchecked! **Not actif yet**. |
