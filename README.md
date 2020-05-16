@@ -1,7 +1,5 @@
 # OctoberCMS-Onesignal-Push
 
-# OctoberCMS-Onesignal-Push
-
 ## This plugin isn't a OneSignal official plugin, but use their API.
 
 ### Getting starting with Push Notification
