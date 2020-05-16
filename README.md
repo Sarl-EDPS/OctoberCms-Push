@@ -35,9 +35,6 @@ If you have any questions, or you can't find what you're looking for, check out 
 
 ### Adapt properties
 
-[![push link](https://octobercms.com/storage/app/uploads/public/572/29d/d6c/thumb_4550_64_64_0_0_auto.png)]
-
-
 |  Property  ........................................ | Description  ...................................................................................................................................................................... |
 | --- | --- |
 | **Choose your domain or subdomain** | Push notifications requires sites to be using HTTPS, non-HTTPS websites must use a subdomain of onesignal.com, choose a unique subdomain in OneSignal configuration API and fill this property with this name|
